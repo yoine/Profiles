@@ -50,12 +50,11 @@ Clash、Kitsunebi、Quantumult(X)、Shadowrocket、Pepi(ShadowRay)、Surge 的�
 
 ### 导入配置教程
 
-- [Kitsunebi 配置导入](https://www.notion.so/divineengine/Kitsunebi-f5f298d57a4c4ab88236f141a00524df)
-- [Potatso 配置导入](https://www.notion.so/divineengine/Potatso-494dcc29c7b74977968e7a5d24798efc)
-- [Quantumult 配置导入](https://www.notion.so/divineengine/Quantumult-f8c21f6a4cfb4bf9af633a638b6cb8b8)
-- [Quantumult X 配置导入](https://www.notion.so/divineengine/Quantumult-X-af3223efdcc14789ba0c7a4742f3622a)
-- [Shadowrocket 配置导入](https://www.notion.so/divineengine/Shadowrocket-5d67f585b4d2412b9f29372d69012463)
-- [Surge 配置导入](https://www.notion.so/divineengine/Surge-c5dd1d4577a14912948ec024aa1e0b21)
+- [Kitsunebi 配置导入](https://medium.com/circumvention-technology/import-profile-on-kitsunebi-6befa3db03db)
+- [Quantumult 配置导入](https://medium.com/circumvention-technology/import-profile-on-quantumult-2e5cef9cb0c5)
+- [Quantumult X 配置导入](https://medium.com/circumvention-technology/import-profile-on-quantumult-x-6dca41b597d8)
+- [Shadowrocket 配置导入](https://medium.com/circumvention-technology/import-profile-on-shadowrocket-f183cd4e95ae)
+- [Surge 配置导入](https://medium.com/circumvention-technology/import-profile-on-surge-2d4119822302)
 
 ------
 
