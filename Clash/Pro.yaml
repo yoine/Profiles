@@ -1,40 +1,60 @@
-# HTTP 代理端口
+# HTTP 端口
 port: 7890
 
-# SOCKS5 代理端口
+# SOCKS5 端口
 socks-port: 7891
 
-# Linux 和 macOS 的 redir 代理端口 (如需使用此功能，请取消注释)
+# Linux 及 macOS 的 redir 端口
 # redir-port: 7892
 
-# 允许局域网的连接（可用来共享代理）
 allow-lan: false
 
-# 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
+# Only applicable when setting allow-lan to true
+# "*": bind all IP addresses
+# 192.168.122.11: bind a single IPv4 address
+# "[aaaa::a8aa:ff:fe09:57d8]": bind a single IPv6 address
+# bind-address: "*"
+
+# Rule / Global/ Direct (默认为 Rule 模式)
 mode: Rule
 
-# 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
-# 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
+# 设置日志等级 (默认为 info)
+# info / warning / error / debug / silent
 log-level: info
 
-# clash 的 RESTful API
+# RESTful API for clash
 external-controller: 127.0.0.1:9090
 
-# 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `${API}/ui`
-# 参数应填写配置目录的相对路径或绝对路径。
+# you can put the static web resource (such as clash-dashboard) to a directory, and clash would serve in `${API}/ui`
+# input is a relative path to the configuration directory or an absolute path
 # external-ui: folder
 
 # RESTful API 的口令 (可选)
 # secret: ""
 
+# experimental feature
+experimental:
+  ignore-resolve-fail: true # ignore dns resolve fail, default value is true
+
+# authentication of local SOCKS5/HTTP(S) server
+# authentication:
+#  - "user1:pass1"
+#  - "user2:pass2"
+
+# # experimental hosts, support wildcard (e.g. *.clash.dev Even *.foo.*.example.com)
+# # static domain has a higher priority than wildcard domain (foo.example.com > *.example.com)
+# hosts:
+#   '*.clash.dev': 127.0.0.1
+#   'alpha.clash.dev': '::1'
+
 # DNS 设置
-dns:
-  enable: true
-  listen: 0.0.0.0:53
-  enhanced-mode: fake-ip
-  nameserver:
-   - 119.29.29.29
-   - 223.5.5.5
+# dns:
+#   enable: true
+#   listen: 0.0.0.0:53
+#   enhanced-mode: fake-ip
+#   nameserver:
+#    - 119.29.29.29
+#    - 223.5.5.5
 
 # Clash for Windows
 cfw-bypass:
@@ -68,29 +88,40 @@ cfw-latency-timeout: 5000
 Proxy:
 # 更多协议配置示例：https://github.com/Dreamacro/clash/blob/master/README.md
 
-# 加密算法推荐：AEAD_AES_128_GCM AEAD_AES_192_GCM AEAD_AES_256_GCM AEAD_CHACHA20_POLY1305
+# Shadowsocks 支持的加密方式:
+#   aes-128-gcm aes-192-gcm aes-256-gcm
+#   aes-128-cfb aes-192-cfb aes-256-cfb
+#   aes-128-ctr aes-192-ctr aes-256-ctr
+#   rc4-md5 chacha20 chacha20-ietf xchacha20
+#   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
 
 # Shadowsocks
-- { name: "1", type: ss, server: 1.2.4.8, port: 443, cipher: AEAD_CHACHA20_POLY1305, password: "password", udp: true }
+- name: "1"
+  type: ss
+  server: 1.2.4.8
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: "password"
+  # udp: true
 
-# Shadowsocks + OBFS
+# Shadowsocks + simple-obfs
 - name: "2"
   type: ss
   server: 1.2.4.8
   port: 443
-  cipher: AEAD_CHACHA20_POLY1305
+  cipher: chacha20-ietf-poly1305
   password: "password"
   plugin: obfs
   plugin-opts:
     mode: tls # or http
     # host: bing.com
 
-# Shadowsocks + V2Ray Plugin
+# Shadowsocks + v2ray-plugin
 - name: "3"
   type: ss
   server: 1.2.4.8
   port: 443
-  cipher: AEAD_CHACHA20_POLY1305
+  cipher: chacha20-ietf-poly1305
   password: "password"
   plugin: v2ray-plugin
   plugin-opts:
@@ -99,38 +130,141 @@ Proxy:
     # skip-cert-verify: true
     # host: bing.com
     # path: "/"
+    # mux: true
     # headers:
     #   custom: value
 
-# Project V(V2Ray) VMess(Websocket + TLS)
-- { name: "4", type: vmess, server: v2ray.cool, port: 443, uuid: a3482e88-686a-4a58-8126-99c9df64b7bf, alterId: 7, cipher: auto, network: ws, ws-path: /v2ray.cool/, tls: true }
+# VMess
+- name: "4"
+  type: vmess
+  server: v2ray.cool
+  port: 443
+  uuid: a3482e88-686a-4a58-8126-99c9df64b7bf
+  alterId: 64
+  cipher: auto
+  # udp: true
+  # tls: true
+  # skip-cert-verify: true
+  # network: ws
+  # ws-path: /path
+  # ws-headers:
+  #   Host: v2ray.com
+
+# 其他协议如 Socks5、HTTP、Snell 示例如下
+
+# socks5
+# - name: "socks"
+#   type: socks5
+#   server: server
+#   port: 443
+#   # username: username
+#   # password: password
+#   # tls: true
+#   # skip-cert-verify: true
+#   # udp: true
+
+# http
+# - name: "http"
+#   type: http
+#   server: server
+#   port: 443
+#   # username: username
+#   # password: password
+#   # tls: true # https
+#   # skip-cert-verify: true
+
+# snell
+# - name: "snell"
+#   type: snell
+#   server: server
+#   port: 44046
+#   psk: yourpsk
+#   # obfs-opts:
+#     # mode: http # or tls
+#     # host: bing.com
 
 # 代理组策略
 Proxy Group:
 # 注意，不同于 Surge，后面要用到的策略组要放到前面
 
 # url-test 通过指定的 URL 测试并选择延迟最低的节点
-- { name: "UrlTest", type: url-test, proxies: ["1", "2", "3","4"], url: "http://www.gstatic.com/generate_204", interval: 300 }
+- name: "UrlTest"
+  type: url-test
+  proxies:
+    - "1"
+    - "2"
+    - "3"
+    - "4"
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 300
 
 # fallback 通过指定的 URL 测试并选择可用的节点，当 1 故障不可用时自动切换到 2 以此类推
-# - { name: "FallBack", type: fallback, proxies: ["1", "2", "3","4"], url: "http://www.gstatic.com/generate_204", interval: 300 }
+# - name: "Fallback"
+#   type: fallback
+#   proxies:
+#     - "1"
+#     - "2"
+#     - "3"
+#     - "4"
+#   url: 'http://www.gstatic.com/generate_204'
+#   interval: 300
 
 # load-balance: 负载均衡
-# - { name: "LoadBalance", type: load-balance, proxies: ["1", "2", "3", "4"], url: "http://www.gstatic.com/generate_204", interval: 300 }
+# - name: "LoadBalance"
+#   type: load-balance
+#   proxies:
+#     - "1"
+#     - "2"
+#     - "3"
+#     - "4"
+#   url: 'http://www.gstatic.com/generate_204'
+#   interval: 300
 
 # 代理节点选择
-- { name: "PROXY", type: select, proxies: ["UrlTest", "1", "2", "3","4"] }
-
+- name: "PROXY"
+  type: select
+  proxies:
+    - "UrlTest"
+    - "1"
+    - "2"
+    - "3"
+    - "4"
 # 白名单模式 PROXY，黑名单模式 DIRECT
-- { name: "Final", type: select, proxies: ["PROXY", "DIRECT"] }
+- name: "Final"
+  type: select
+  proxies:
+    - "PROXY"
+    - "DIRECT"
 # Apple 服务代理
-- { name: "Apple", type: select, proxies: ["DIRECT", "PROXY"] }
+- name: "Apple"
+  type: select
+  proxies:
+    - "DIRECT"
+    - "PROXY"
 # 国际媒体服务
-- { name: "ForeignMedia", type: select, proxies: ["PROXY","1", "2", "3","4"] }
+- name: "ForeignMedia"
+  type: select
+  proxies:
+    - "PROXY"
+    - "1"
+    - "2"
+    - "3"
+    - "4"
 # 国内媒体服务
-- { name: "DomesticMedia", type: select, proxies: ["DIRECT", "1", "2", "3","4"] }
+- name: "DomesticMedia"
+  type: select
+  proxies:
+    - "DIRECT"
+    - "1"
+    - "2"
+    - "3"
+    - "4"
 # 运营商及声名狼藉网站劫持
-- { name: "Hijacking", type: select, proxies: ["REJECT", "DIRECT"] }
+- name: "Hijacking"
+  type: select
+  proxies:
+    - "REJECT"
+    - "DIRECT"
 
 # 规则
 Rule:
