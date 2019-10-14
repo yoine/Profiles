@@ -35,6 +35,7 @@ DOMAIN-SUFFIX,channel4.com,ForeignMedia
 # > AbemaTV
 USER-AGENT,AbemaTV*,ForeignMedia
 DOMAIN-SUFFIX,abema.io,ForeignMedia
+DOMAIN-SUFFIX,abema.tv,ForeignMedia
 DOMAIN-SUFFIX,ameba.jp,ForeignMedia
 DOMAIN-SUFFIX,hayabusa.io,ForeignMedia
 DOMAIN,abematv.akamaized.net,ForeignMedia
