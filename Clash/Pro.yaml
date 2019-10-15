@@ -791,6 +791,7 @@ Rule:
 - DOMAIN-SUFFIX,cbc.ca,PROXY
 - DOMAIN-SUFFIX,cdw.com,PROXY
 - DOMAIN-SUFFIX,change.org,PROXY
+- DOMAIN-SUFFIX,channelnewsasia.com,PROXY
 - DOMAIN-SUFFIX,ck101.com,PROXY
 - DOMAIN-SUFFIX,clarionproject.org,PROXY
 - DOMAIN-SUFFIX,clyp.it,PROXY
@@ -830,7 +831,9 @@ Rule:
 - DOMAIN-SUFFIX,enanyang.my,PROXY
 - DOMAIN-SUFFIX,encyclopedia.com,PROXY
 - DOMAIN-SUFFIX,esoir.be,PROXY
+- DOMAIN-SUFFIX,etherscan.io,PROXY
 - DOMAIN-SUFFIX,euronews.com,PROXY
+- DOMAIN-SUFFIX,evozi.com,PROXY
 - DOMAIN-SUFFIX,feedly.com,PROXY
 - DOMAIN-SUFFIX,firech.at,PROXY
 - DOMAIN-SUFFIX,flickr.com,PROXY
@@ -932,6 +935,7 @@ Rule:
 - DOMAIN-SUFFIX,overcast.fm,PROXY
 - DOMAIN-SUFFIX,paltalk.com,PROXY
 - DOMAIN-SUFFIX,pao-pao.net,PROXY
+- DOMAIN-SUFFIX,parsevideo.com,PROXY
 - DOMAIN-SUFFIX,pbxes.com,PROXY
 - DOMAIN-SUFFIX,pcdvd.com.tw,PROXY
 - DOMAIN-SUFFIX,pchome.com.tw,PROXY
@@ -942,9 +946,11 @@ Rule:
 - DOMAIN-SUFFIX,player.fm,PROXY
 - DOMAIN-SUFFIX,plurk.com,PROXY
 - DOMAIN-SUFFIX,po18.tw,PROXY
+- DOMAIN-SUFFIX,potato.im,PROXY
 - DOMAIN-SUFFIX,potatso.com,PROXY
 - DOMAIN-SUFFIX,prism-break.org,PROXY
 - DOMAIN-SUFFIX,proxifier.com,PROXY
+- DOMAIN-SUFFIX,pt.im,PROXY
 - DOMAIN-SUFFIX,pts.org.tw,PROXY
 - DOMAIN-SUFFIX,pubu.com.tw,PROXY
 - DOMAIN-SUFFIX,pubu.tw,PROXY
@@ -959,6 +965,7 @@ Rule:
 - DOMAIN-SUFFIX,redditmedia.com,PROXY
 - DOMAIN-SUFFIX,resilio.com,PROXY
 - DOMAIN-SUFFIX,reuters.com,PROXY
+- DOMAIN-SUFFIX,reutersmedia.net,PROXY
 - DOMAIN-SUFFIX,rfi.fr,PROXY
 - DOMAIN-SUFFIX,rixcloud.com,PROXY
 - DOMAIN-SUFFIX,roadshow.hk,PROXY
@@ -983,6 +990,7 @@ Rule:
 - DOMAIN-SUFFIX,textnow.me,PROXY
 - DOMAIN-SUFFIX,theguardian.com,PROXY
 - DOMAIN-SUFFIX,theinitium.com,PROXY
+- DOMAIN-SUFFIX,thetvdb.com,PROXY
 - DOMAIN-SUFFIX,tineye.com,PROXY
 - DOMAIN-SUFFIX,torproject.org,PROXY
 - DOMAIN-SUFFIX,tumblr.com,PROXY
@@ -1082,6 +1090,7 @@ Rule:
 - DOMAIN-SUFFIX,target.com,PROXY
 - DOMAIN-SUFFIX,thinkgeek.com,PROXY
 - DOMAIN-SUFFIX,tracfone.com,PROXY
+- DOMAIN-SUFFIX,unity3d.com,PROXY
 - DOMAIN-SUFFIX,uploader.jp,PROXY
 - DOMAIN-SUFFIX,vevo.com,PROXY
 - DOMAIN-SUFFIX,viu.tv,PROXY
@@ -1169,7 +1178,6 @@ Rule:
 - DOMAIN-SUFFIX,4bluestones.biz,PROXY
 - DOMAIN-SUFFIX,9bis.net,PROXY
 - DOMAIN-SUFFIX,allconnected.co,PROXY
-- DOMAIN-SUFFIX,s3.amazonaws.com,PROXY
 - DOMAIN-SUFFIX,aol.com,PROXY
 - DOMAIN-SUFFIX,bcc.com.tw,PROXY
 - DOMAIN-SUFFIX,bit.ly,PROXY
@@ -1185,6 +1193,7 @@ Rule:
 - DOMAIN-SUFFIX,ctitv.com.tw,PROXY
 - DOMAIN-SUFFIX,cuhk.edu.hk,PROXY
 - DOMAIN-SUFFIX,cusu.hk,PROXY
+- DOMAIN-SUFFIX,discord.gg,PROXY
 - DOMAIN-SUFFIX,discuss.com.hk,PROXY
 - DOMAIN-SUFFIX,dropboxapi.com,PROXY
 - DOMAIN-SUFFIX,duolingo.cn,PROXY
@@ -1208,6 +1217,7 @@ Rule:
 - DOMAIN-SUFFIX,now.im,PROXY
 - DOMAIN-SUFFIX,nowe.com,PROXY
 - DOMAIN-SUFFIX,redditlist.com,PROXY
+- DOMAIN-SUFFIX,s3.amazonaws.com,PROXY
 - DOMAIN-SUFFIX,signal.org,PROXY
 - DOMAIN-SUFFIX,smartmailcloud.com,PROXY
 - DOMAIN-SUFFIX,sparknotes.com,PROXY
