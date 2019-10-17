@@ -541,8 +541,8 @@ Rule:
 - DOMAIN,manifest.prod.boltdns.net,ForeignMedia
 - DOMAIN,s3-ap-southeast-1.amazonaws.com,ForeignMedia
 # > 华文电视
-USER-AGENT,HWTVMobile*,ForeignMedia
-DOMAIN-SUFFIX,5itv.tv,ForeignMedia
+# USER-AGENT,HWTVMobile*,ForeignMedia
+- DOMAIN-SUFFIX,5itv.tv,ForeignMedia
 # > Hulu
 - DOMAIN-SUFFIX,hulu.com,ForeignMedia
 - DOMAIN-SUFFIX,huluim.com,ForeignMedia
@@ -594,7 +594,7 @@ DOMAIN-SUFFIX,5itv.tv,ForeignMedia
 - DOMAIN-SUFFIX,pornhub.com,ForeignMedia
 - DOMAIN-SUFFIX,pornhubpremium.com,ForeignMedia
 # > 台湾好
-- USER-AGENT,TaiwanGood*,ForeignMedia
+# USER-AGENT,TaiwanGood*,ForeignMedia
 - DOMAIN-SUFFIX,skyking.com.tw,ForeignMedia
 - DOMAIN,hamifans.emome.net,ForeignMedia
 # > Twitch
