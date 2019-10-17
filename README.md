@@ -112,6 +112,14 @@ Clash、Kitsunebi、Quantumult(X)、Shadowrocket、Pepi(ShadowRay)、Surge 的�
 
 综上所述、以此类推，独立的 .list 一般都集成在了默认的 6 条 .list 文件中，如果你没有进阶的定制化需求是**不 需 要**引入那么多的，根据需求使用才是 Ruleset/Filter 的灵活用法，规则不是越多越好。
 
+**获取更多 list**
+
+Surge：https://github.com/ConnersHua/Profiles/tree/master/Surge/Ruleset
+
+Quantumult X：https://github.com/ConnersHua/Profiles/tree/master/Quantumult/X/Filter
+
+.list 文件真实地址点击「Raw」获得，直接复制网页地址如「 https://github.com/ConnersHua/Profiles/blob/master/Quantumult/X/Filter/Advertising.list 」是错误的，确保你引用的地址是「 https://raw.githubusercontent.com/ 」开头
+
 ------
 
 
