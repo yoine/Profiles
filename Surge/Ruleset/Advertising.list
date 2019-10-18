@@ -751,8 +751,7 @@ URL-REGEX,^https?:\/\/pic\.k\.sohu\.com\/img8\/wb\/tj\/
 URL-REGEX,^https?:\/\/s1\.api\.tv\.itc\.cn\/v4\/mobile\/control\/switch\.json
 URL-REGEX,^https?:\/\/api\.tv\.sohu\.com\/agg\/api\/app\/config\/bootstrap
 # > StarFans
-URL-REGEX,^https?:\/\/a\.sfansclub\.com\/business\/t\/ad\/
-URL-REGEX,^https?:\/\/a\.sfansclub\.com\/business\/t\/boot\/screen\/index
+URL-REGEX,^https?:\/\/g\.cdn\.pengpengla\.com\/starfantuan\/boot-screen-info\/
 # > 什么值得买
 URL-REGEX,^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading
 # > 四季線上影視4gTV
