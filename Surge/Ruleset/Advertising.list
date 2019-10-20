@@ -338,7 +338,6 @@ DOMAIN,track.sohu.com
 DOMAIN,hui.sohu.com
 # (T)
 # > Tencent
-DOMAIN-SUFFIX,adnet.qq.com
 DOMAIN-SUFFIX,beacon.qq.com
 DOMAIN-SUFFIX,bugly.qq.com
 DOMAIN-SUFFIX,e.qq.com

@@ -338,7 +338,6 @@ DOMAIN,track.sohu.com,REJECT
 DOMAIN,hui.sohu.com,REJECT
 # (T)
 # > Tencent
-DOMAIN-SUFFIX,adnet.qq.com,REJECT
 DOMAIN-SUFFIX,beacon.qq.com,REJECT
 DOMAIN-SUFFIX,bugly.qq.com,REJECT
 DOMAIN-SUFFIX,e.qq.com,REJECT
