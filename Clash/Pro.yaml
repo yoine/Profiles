@@ -250,7 +250,7 @@ Proxy Group:
     - "2"
     - "3"
     - "4"
-# 国内面向港澳台限定流媒体服务
+# 大陆流媒体面向港澳台限定服务
 - name: "HKMTMedia"
   type: select
   proxies:
