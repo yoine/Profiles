@@ -1,6 +1,7 @@
 # Unbreak
 # > General
 USER-AGENT,coffeecorp*,DIRECT
+USER-AGENT,restaurant-mobile*,DIRECT
 DOMAIN,app.adjust.com,DIRECT
 # > Google
 DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
